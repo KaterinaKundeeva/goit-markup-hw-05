@@ -1,7 +1,3 @@
-/* html {
-  box-sizing: border-box;
-} */
-
 :root {
   --accent-color: #2196f3;
   --main-text-color: #212121;
@@ -171,19 +167,19 @@ p {
   align-items: center;
 }
 
-.header-contacts-link:hover .icon-header,
-.header-contacts-link:focus .icon-header {
-  fill: var(--accent-color);
-}
-
 .icon-header {
   display: inline-block;
   margin-right: 10px;
   fill: var(--secondary-text-color);
 
-  transition-property: color;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contacts-link:hover .icon-header,
+.header-contacts-link:focus .icon-header {
+  fill: var(--accent-color);
 }
 
 .envelope {
@@ -219,9 +215,6 @@ p {
     ),
     url(../images/bghero.jpg);
   background-color: #c4c4c4;
-}
-
-.overlay {
 }
 
 .hero-title {
@@ -363,8 +356,6 @@ h2 {
 
   margin: 0;
   padding: 27px 0;
-  font-family: Roboto;
-  font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
@@ -513,7 +504,7 @@ h3 {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition-property: color, border;
+  transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -710,7 +701,7 @@ h3 {
   background: #ffffff;
   border: 1px solid #eeeeee;
 
-  transition-property: box-shadow;
+  transition-property: box-shadow, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -729,6 +720,7 @@ h3 {
   line-height: 2;
   letter-spacing: 0.06em;
   margin-bottom: 4px;
+  color: var(--main-text-color);
 }
 
 .portfolio-examples-link:hover,
@@ -753,9 +745,6 @@ h3 {
 .example-thumb {
   position: relative;
   overflow: hidden;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 2150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .example-discription {
@@ -765,8 +754,7 @@ h3 {
   height: 100%;
 
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 2150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   padding: 63px 24px;
   font-family: Roboto;
@@ -777,7 +765,7 @@ h3 {
   background: rgba(33, 150, 243, 0.9);
 }
 
-.example-thumb:hover .example-discription {
+.portfolio-examples-link:hover .example-discription {
   opacity: 1;
   transform: translateY(-100%);
 }
